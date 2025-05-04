@@ -7,5 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "🎉 ¡Hola mundo desde GitHub Actions!"
-      - run: echo "Este trabajo se ejecutó en el commit de: ${{ github.event.head_commit.message }}"
+      - name: Saludo inicial
+        run: echo "🎉 ¡Hola mundo desde GitHub Actions!"
+
+      - name: Mensaje con commit
+        run: echo "Este trabajo se ejecutó en el commit de: ${{ github.event.head_commit.message }}"
