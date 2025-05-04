@@ -1,0 +1,19 @@
+name: Ejecutar script Python
+
+on: [push]
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar script.py
+        run: python script.py
