@@ -1,0 +1,11 @@
+name: GitHub Actions Demo
+
+on: push
+
+jobs:
+  explore-github-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "🎉 ¡Hola mundo desde GitHub Actions!"
+      - run: echo "Este trabajo se ejecutó en el commit de: ${{ github.event.head_commit.message }}"
